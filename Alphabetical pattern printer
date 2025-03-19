@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main(){
+    char character;
+    printf("This program will help you print a pattern like this: \n");
+    printf("ABCDEFGH\n");
+    printf("ABCDEFG\n");
+    printf("ABCDEF\n");
+    printf("ABCDE\n");
+    printf("ABCD\n");
+    printf("ABC\n");
+    printf("AB\n");
+    printf("A\n");
+    printf("Enter up to which character you want to print the pattern: ");
+    scanf(" %c", &character); 
+
+    if (character >= 'A' && character <= 'Z') 
+    {
+        for (char i = character; i >= 'A'; i--) 
+        {
+            for (char j = 'A'; j <= i; j++) 
+            {
+                printf("%c", j); 
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("Sorry! This program will only print uppercase character patterns.\n");
+    }
+    return 0;
+}
